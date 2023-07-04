@@ -1,0 +1,43 @@
+.game {
+	display: grid;
+	grid-template-areas: 'status status' 'board moves';
+	gap: 1em 2em;
+}
+
+.board {
+	display: grid;
+	grid-template-columns: repeat(3, 5rem);
+	grid-auto-rows: 5rem;
+	gap: 0.25rem;
+	grid-area: board;
+}
+.square {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3em;
+	font-weight: 700;
+}
+
+.square.blue {
+	color: hsl(237, 100%, 70%);
+}
+.square.yellow {
+	color: yellow;
+}
+
+.status {
+	font-size: 2em;
+	font-weight: 700;
+	grid-area: status;
+}
+
+.moves {
+	grid-area: moves;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}
+.move {
+	padding: 0.5em 1em;
+}
